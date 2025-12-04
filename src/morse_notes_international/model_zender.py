@@ -4,7 +4,6 @@ from morse_notes_international.arduino_zender import (
     list_resources,
     converting_ADC,
 )
-import time
 
 
 class DiodeExperiment:
@@ -12,24 +11,12 @@ class DiodeExperiment:
         self.device = ArduinoVISADevice(port="ASRL13::INSTR")
 
     def scan(self):
-        # resistance = 220  # ohm
-        # ADC_start = converting_ADC(start)
-        # ADC_stop = converting_ADC(stop)
-
         self.device.set_output_value(1000)
-
-        # for ADC in range(ADC_start, ADC_stop + 1):
-        #     self.device.set_output_value(ADC)
-
-        #     voltage_ch2 = self.device.get_input_voltage(ch=2)
-
-        #     voltage_diode = self.device.get_input_voltage(
-        #         ch=1
-        #     ) - self.device.get_input_voltage(ch=2)
-
-        #     current = voltage_ch2 / resistance
-
-        # self.device.set_output_value(3.3)
+        # self.device.set_output_value(0)
+        # self.device.set_output_value(1000)
+        # self.device.set_output_value(0)
+        # self.device.set_output_value(1000)
+        # self.device.set_output_value(0)
 
 
 def LED():
