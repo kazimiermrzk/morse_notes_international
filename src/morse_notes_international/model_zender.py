@@ -3,15 +3,15 @@ from morse_notes_international.arduino_zender import (
     ArduinoVISADevice,
     list_resources,
     converting_ADC,
-)  # noqa
-# from pythondaq.cli import scan
+)
+import time
 
 
 class DiodeExperiment:
     def __init__(self, port):
-        self.device = ArduinoVISADevice(port="ASRL6::INSTR")
+        self.device = ArduinoVISADevice(port="ASRL13::INSTR")
 
-    def LED(self, start, stop):
+    def scan(self, start, stop):
         resistance = 220  # ohm
         ADC_start = converting_ADC(start)
         ADC_stop = converting_ADC(stop)
@@ -30,3 +30,12 @@ class DiodeExperiment:
         #     current = voltage_ch2 / resistance
 
         # self.device.set_output_value(3.3)
+
+
+def LED():
+    test = DiodeExperiment()
+    return test
+
+
+if __name__ == "__main__":
+    LED()

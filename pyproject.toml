@@ -16,6 +16,7 @@ dependencies = [
 
 [project.scripts]
 morse-notes-international = "morse_notes_international:main"
+led = "morse_notes_international.model_zender:LED"
 
 [build-system]
 requires = ["uv_build>=0.9.5,<0.10.0"]
