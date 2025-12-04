@@ -8,13 +8,13 @@ import time
 
 
 class DiodeExperiment:
-    def __init__(self, port):
+    def __init__(self):
         self.device = ArduinoVISADevice(port="ASRL13::INSTR")
 
-    def scan(self, start, stop):
-        resistance = 220  # ohm
-        ADC_start = converting_ADC(start)
-        ADC_stop = converting_ADC(stop)
+    def scan(self):
+        # resistance = 220  # ohm
+        # ADC_start = converting_ADC(start)
+        # ADC_stop = converting_ADC(stop)
 
         self.device.set_output_value(1000)
 
@@ -34,7 +34,7 @@ class DiodeExperiment:
 
 def LED():
     test = DiodeExperiment()
-    return test
+    return test.scan()
 
 
 if __name__ == "__main__":
