@@ -12,11 +12,11 @@ class DiodeExperiment:
 
     def scan(self):
         self.device.set_output_value(1000)
-        # self.device.set_output_value(0)
-        # self.device.set_output_value(1000)
-        # self.device.set_output_value(0)
-        # self.device.set_output_value(1000)
-        # self.device.set_output_value(0)
+        self.device.set_output_value(0)
+        self.device.set_output_value(1000)
+        self.device.set_output_value(0)
+        self.device.set_output_value(1000)
+        self.device.set_output_value(0)
 
 
 def LED():

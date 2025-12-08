@@ -118,4 +118,4 @@ def converting_ADC(V_value):
     return ADC_value
 
 
-print(list_resources())
+# print(list_resources())
